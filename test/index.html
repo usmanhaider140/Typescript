@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Data</title>
+  </head>
+  <body>
+    <a id="download" href="#">Download</a>
+    <script type="text/javascript">
+      const url = window.URL.createObjectURL(
+        new Blob(
+          [{ id: "name" }, ["1", "usman"], ["1", "usman"], ["1", "usman"]],
+          {
+            type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          }
+        )
+      );
+      const link = document.getElementById("download");
+      link.href = url;
+      link.setAttribute("download", filename);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    </script>
+  </body>
+</html>
