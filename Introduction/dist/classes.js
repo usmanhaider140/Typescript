@@ -74,6 +74,11 @@ class Teacher extends Person {
         return "Mr. " + super.FullName;
     }
 }
+class Principal extends Person {
+    get FullName() {
+        return "Principal " + super.FullName;
+    }
+}
 printNames([new Student(1, "Student", "Doe"), new Teacher("Jane", "Doe")]);
 function printNames(people) {
     for (let person of people) {
@@ -91,12 +96,25 @@ class Shape {
         return this.color;
     }
 }
-class Calender {
+class Circle extends Shape {
+    constructor(radius, color) {
+        super(color);
+        this.radius = radius;
+    }
+    render() {
+        return super.render() + " " + this.radius;
+    }
+}
+class GoogleCalendar {
     constructor(year, month) {
         this.year = year;
         this.month = month;
     }
-    addEvent() { }
-    removeEvent() { }
+    addEvent() {
+        throw new Error("Method not implemented.");
+    }
+    removeEvent() {
+        throw new Error("Method not implemented.");
+    }
 }
 //# sourceMappingURL=classes.js.map

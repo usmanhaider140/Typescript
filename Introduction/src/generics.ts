@@ -43,6 +43,7 @@ interface Result<T> {
 }
 
 function fetch<T>(url: string): Result<T> {
+  console.log(url);
   return {
     data: null,
     error: null,
