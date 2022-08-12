@@ -89,5 +89,4 @@ function processEvent(event) {
 function reject(error) {
     throw error;
 }
-processEvent(new Event("click"));
 //# sourceMappingURL=index.js.map

@@ -17,14 +17,19 @@ export default class Store {
 
 // Topic: exports module
 export class Compressor {
-  constructor(private readonly store: Store) {}
+  constructor(private readonly store: Store) {
+    console.log(this.store.get("key"));
+  }
+
   compress(data: string): string {
     return data;
   }
 }
 
 export class Decompressor {
-  constructor(private readonly store: Store) {}
+  constructor(private readonly store: Store) {
+    console.log(this.store.get("key"));
+  }
   decompress(data: string): string {
     return data;
   }

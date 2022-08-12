@@ -166,7 +166,7 @@ function reject(error: Error): never {
   throw error;
 }
 
-processEvent(new Event("click"));
+// processEvent(new Event("click"));
 // console.log("first");
 
 // reject(new Error("Error"));
